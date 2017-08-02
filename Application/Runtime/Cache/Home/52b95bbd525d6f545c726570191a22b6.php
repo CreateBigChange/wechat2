@@ -1,0 +1,363 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>E角</title>
+
+    <meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport">
+    <link rel="shortcut icon" href="/wechat/Public/resouce/img/logo/title.ico" type="image/x-icon">
+    <link rel="icon" href="/wechat/Public/resouce/img/logo/title.ico" type="image/x-icon">
+
+    <link href="/wechat/Public/css/style.css" rel="stylesheet"/>
+    <link href='/wechat/Public/css/google.css' rel='stylesheet' type='text/css'>
+    <link href="/wechat/Public/Olive/css/bootstrap.min.css" rel="stylesheet"><!-- BOOTSTRAP CSS  -->
+    <link href="/wechat/Public/Olive/css/bootstrap-reset.css" rel="stylesheet"><!-- BOOTSTRAP CSS  -->
+
+    <link href="/wechat/Public/Olive/css/style.css" rel="stylesheet"><!-- THEME BASIC CSS  -->
+    <link href="/wechat/Public/Olive/css/style-responsive.css" rel="stylesheet"><!-- THEME RESPONSIVE CSS  -->
+    <link rel="stylesheet" type="text/css" href="/wechat/Public/css/StudentAbroad/register.css">
+
+    <script type="text/javascript">
+        /*用于标记是否完成手机的验证和接受条款*/
+         AcceptSign = 0;
+         Phone = 0;
+         MODULE="/wechat/index.php/Home";
+         CONTROLLER ="/wechat/index.php/Home/StudentAbroad";
+         login="<?php echo U('LaunchActivity/LaunchActivity')?>";
+
+    </script>
+
+</head>
+<body>
+
+<!-- 模态框（Modal）语言等级说明 -->
+<div class="modal fade rateInformation" id="direction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog LanguageModel">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <center>
+                    <h4 class="modal-title Direction" >Direction</h4>
+                </center>
+            </div>
+            <div class="modal-body">
+
+                <div class="list-group">
+                    <a href="#" class="list-group-item active title-color">
+                        <h4 class="list-group-item-heading ">
+                            5 stars
+                        </h4>
+                    </a>
+                    <a href="#" class="list-group-item ">
+                        <p class="list-group-item-text ">
+                            Expert User. Has fully operational command of the language： appropriate，accurate and fluent
+                            with complete understanding.
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item active title-color">
+                        <h4 class="list-group-item-heading ">
+                            4 stars
+                        </h4>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <p class="list-group-item-text">
+                            Good User. Has operational command of the language,though with occasional
+                            inaccuracies,inappropriacies and misunderstandings in some situations. Generally handles
+                            complex language well and understands detailed reasoning
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item active title-color">
+                        <h4 class="list-group-item-heading">
+                            3 stars
+                        </h4>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <p class="list-group-item-text">
+                            Competent User. Has generally effective command of the language despite some
+                            inaccuracies,inappropriacies and misunderstandings. Can use and understand fairly complex
+                            language,particularly in familiar situations.
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item active title-color">
+                        <h4 class="list-group-item-heading">
+                            2 stars
+                        </h4>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <p class="list-group-item-text">
+                            Limited User. Basic competence is limited to familiar situations. Has frequent problems in
+                            understanding and expression. Is not able to use complex language.
+
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item active title-color">
+                        <h4 class="list-group-item-heading">
+                            1 stars
+                        </h4>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <p class="list-group-item-text">
+                            Intermittent User. No real communication is possible except for the most basic information
+                            using isolated words or short formulae in familiar situations and to meet immediate needs.
+                            Has great difficulty understanding spoken and written Engli
+                        </p>
+                    </a>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default closeBtn" data-dismiss="modal">Close</button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!--modal-->
+
+
+<!--关注微信公众号的模态框-->
+
+<!-- 模态框（Modal） -->
+<div class="modal fade Verify" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <center>
+                    <h4 class="modal-title verifyTitle" >Verify</h4>
+                </center>
+            </div>
+            <div class="modal-body VerifyBody">
+                <form role="form">
+                    <div class="form-group">
+				    <span>
+				    	<input type="text" class="form-control PhoneNumInput" id="phone" placeholder="Phone Number">
+				    </span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control pinInput" placeholder="PIN" id="pin" value="">
+                        <button type="button" id="getpit" class="btn btn-info Pin">Get PIN</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default verifyClose" data-dismiss="modal">Close</button>
+                <a href="<?php echo U('Activity')?>"></a>
+                <button type="button" class="btn btn-primary messagebtn" id="messagebtn" data-dismiss="modal">Confirm</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!--modal-->
+
+
+<div class="lg-container body">
+    <h1 class="BaseColor register"> Register </h1>
+    <form action="/wechat/index.php/Home/StudentAbroad/RegisterFinished" id="lg-form" name="lg-form" method="post"
+          enctype="multipart/form-data">
+        <div>
+            <input type="text" name="ChineseName" id="username" placeholder="Chinese Name"/>
+        </div>
+
+        <div>
+            <input type="text" name="EnglishName" placeholder="English Name"/>
+        </div>
+        <div>
+        <!--语言的添加-->
+        <div id="content">
+        </div>
+        <!--语言的添加-->
+        <button class="btn  btn-default BaseColor Language" id="more" type='button'>+language</button>
+        <img src="/wechat/Public/resouce/img/u=5599099874283859303&fm=21&gp=0.png" class="Limg" data-toggle="modal"
+             data-target="#direction" style="cursor:pointer" />
+         </div>
+        <div>
+            <input type="text" name="Interest" id="Interest" placeholder="Interest"/>
+        </div>
+        <div>
+            <input type="text" name="Major" id="Major" placeholder="Major"/>
+        </div>
+
+        <div>
+            <label for="Interest">Nation:</label>
+            <select name="nation" class="nation">
+<option value="Afghanistan ">Afghanistan 阿富汗 </option>
+<option value="Albania ">Albania 阿尔巴尼亚 </option>
+<option value="Algeria">Algeria 阿尔及利亚</option>
+<option value="Angola">Angola 安哥拉</option>
+<option value="Argentina ">Argentina 阿根廷 </option>
+<option value="Australia">Australia 澳大利亚</option>
+<option value="Austria">Austria 奥地利</option>
+<option value="Azerbaijan">Azerbaijan 阿塞拜疆</option>
+<option value="Bahamas">Bahamas 巴哈马</option>
+<option value="Bahrain ">Bahrain 巴林 </option>
+<option value="Bangladesh">Bangladesh 孟加拉</option>
+<option value="Belgium">Belgium 比利时</option>
+<option value="Benin">Benin 贝宁</option>
+<option value="Bermuda Is.">Bermuda Is. 百慕大群岛</option>
+<option value="Bhutan">Bhutan 不丹</option>
+<option value="Bolivia">Bolivia 玻利维亚</option>
+<option value="Botswana">Botswana 博茨瓦纳</option>
+<option value="Brazil">Brazil 巴西</option>
+<option value="Brunei">Brunei 文莱</option>
+<option value="Bulgaria ">Bulgaria 保加利亚 </option>
+<option value="Burundi">Burundi 布隆迪</option>
+<option value="Cambodia ">Cambodia 柬埔寨 </option>
+<option value="Cameroon">Cameroon 喀麦隆</option>
+<option value="Canada ">Canada 加拿大 </option>
+<option value="Central Africa ">Central Africa 中非共和国 </option>
+<option value="Chile ">Chile 智利 </option>
+<option value="China">China 中国</option>
+<option value="Colombia ">Colombia 哥伦比亚 </option>
+<option value="Congo">Congo 刚果</option>
+<option value="Cook Is.">Cook Is. 库克群岛</option>
+<option value="Costa Rica">Costa Rica 哥斯达黎加</option>
+<option value="Croatia">Croatia 克罗地亚</option>
+<option value="Cuba">Cuba 古巴</option>
+<option value="Cyprus">Cyprus 塞浦路斯</option>
+<option value="Czech ">Czech 捷克共和国 </option>
+<option value="Denmark">Denmark 丹麦</option>
+<option value="Ecuador">Ecuador 厄瓜多尔</option>
+<option value="Egypt ">Egypt 埃及 </option>
+<option value="Estonia ">Estonia 爱沙尼亚 </option>
+<option value="Ethiopia">Ethiopia 埃塞俄比亚</option>
+<option value="Fiji">Fiji 斐济</option>
+<option value="Finland">Finland 芬兰</option>
+<option value="France">France 法国</option>
+<option value="Gabon">Gabon 加蓬</option>
+<option value="Gambia">Gambia 冈比亚</option>
+<option value="Germany">Germany 德国</option>
+<option value="Ghana">Ghana 加纳</option>
+<option value="Greece">Greece 希腊</option>
+<option value="Grenada">Grenada 格林纳达</option>
+<option value="Guam">Guam 关岛</option>
+<option value="Guatemala">Guatemala 危地马拉</option>
+<option value="Guinea">Guinea 几内亚</option>
+<option value="Guyana">Guyana 圭亚那</option>
+<option value="Haiti">Haiti 海地</option>
+<option value="Hon Kong">Hon Kong 香港</option>
+<option value="Honduras ">Honduras 洪都拉斯 </option>
+<option value="Hungary">Hungary 匈牙利</option>
+<option value="Iceland">Iceland 冰岛</option>
+<option value="India">India 印度</option>
+<option value="Indonesia">Indonesia 印度尼西亚</option>
+<option value="Iran ">Iran 伊朗 </option>
+<option value="Iraq ">Iraq 伊拉克 </option>
+<option value="Ireland">Ireland 爱尔兰</option>
+<option value="Israel">Israel 以色列</option>
+<option value="Italy">Italy 意大利</option>
+<option value="Jamaica">Jamaica 牙买加</option>
+<option value="Japan">Japan 日本</option>
+<option value="Jordan">Jordan 约旦</option>
+<option value="Kazakhstan">Kazakhstan 哈萨克斯坦</option>
+<option value="Korea">Korea 韩国</option>
+<option value="Kuwait">Kuwait 科威特</option>
+<option value="Laos ">Laos 老挝 </option>
+<option value="Latvia ">Latvia 拉托维亚 </option>
+<option value="Lebanon ">Lebanon 黎巴嫩 </option>
+<option value="Libya ">Libya 利比亚 </option>
+<option value="Lithuania ">Lithuania 立陶宛 </option>
+<option value="Luxembourg ">Luxembourg 卢森堡 </option>
+<option value="Macao ">Macao 澳门 </option>
+<option value="Madagascar">Madagascar 马达加斯加</option>
+<option value="Malaysia ">Malaysia 马来西亚 </option>
+<option value="Maldives ">Maldives 马尔代夫 </option>
+<option value="Mali ">Mali 马里 </option>
+<option value="Malta">Malta 马耳他</option>
+<option value="Mauritania ">Mauritania 毛里塔尼亚 </option>
+<option value="Mauritius">Mauritius 毛里求斯</option>
+<option value="Mexico">Mexico 墨西哥</option>
+<option value="Moldova">Moldova 摩尔多瓦</option>
+<option value="Monaco">Monaco 摩纳哥</option>
+<option value="Mongolia ">Mongolia 蒙古 </option>
+<option value="Morocco">Morocco 摩洛哥</option>
+<option value="Mozambique ">Mozambique 莫桑比克 </option>
+<option value="Namibia">Namibia 纳米比亚</option>
+<option value="Nepal">Nepal 尼泊尔</option>
+<option value="Netherlands">Netherlands 荷兰</option>
+<option value="New Zealand">New Zealand 新西兰</option>
+<option value="Nicaragua ">Nicaragua 尼加拉瓜 </option>
+<option value="Niger">Niger 尼日尔</option>
+<option value="Nigeria">Nigeria 尼日利亚</option>
+<option value="North Korea">North Korea 朝鲜</option>
+<option value="Norway">Norway 挪威</option>
+<option value="Oman">Oman 阿曼</option>
+<option value="Pakistan">Pakistan 巴基斯坦</option>
+<option value="Panama ">Panama 巴拿马 </option>
+<option value="Papua New Guinea">Papua New Guinea 巴布亚新几内亚</option>
+<option value="Paraguay">Paraguay 巴拉圭</option>
+<option value="Peru ">Peru 秘鲁 </option>
+<option value="Philippines">Philippines 菲律宾</option>
+<option value="Poland">Poland 波兰</option>
+<option value="Portugal">Portugal 葡萄牙</option>
+<option value="Qatar ">Qatar 卡塔尔 </option>
+<option value="Romania">Romania 罗马尼亚</option>
+<option value="Russia">Russia 俄罗斯</option>
+<option value="Rwanda">Rwanda 卢旺达</option>
+<option value="San Marno">San Marno 圣马力诺</option>
+<option value="Saudi Arabia">Saudi Arabia 沙特阿拉伯</option>
+<option value="Senegal">Senegal 塞内加尔</option>
+<option value="Singapore">Singapore 新加坡</option>
+<option value="Slovakia ">Slovakia 斯洛伐克 </option>
+<option value="Somalia ">Somalia 索马里 </option>
+<option value="South Africa">South Africa 南非</option>
+<option value="Spain">Spain 西班牙</option>
+<option value="Sudan">Sudan 苏丹</option>
+<option value="Sweden">Sweden 瑞典</option>
+<option value="Switzerland">Switzerland 瑞士</option>
+<option value="Syria">Syria 叙利亚</option>
+<option value="Tadzhikistan">Tadzhikistan 塔吉克斯坦</option>
+<option value="Taiwan">Taiwan 台湾</option>
+<option value="Tanzania">Tanzania 坦桑尼亚</option>
+<option value="Thailand">Thailand 泰国</option>
+<option value="Tonga">Tonga 汤加</option>
+<option value="Tunisia">Tunisia 突尼斯</option>
+<option value="Turkmenistan">Turkmenistan 土库曼斯坦</option>
+<option value="Uganda">Uganda 乌干达</option>
+<option value="Ukraine">Ukraine 乌克兰</option>
+<option value="United Arab Emirates">United Arab Emirates 阿联酋</option>
+<option value="United Kingdom">United Kingdom 英国</option>
+<option value="United States ">United States 美国 </option>
+<option value="Uruguay ">Uruguay 乌拉圭 </option>
+<option value="Uzbekistan">Uzbekistan 乌兹别克斯坦</option>
+<option value="Vatican City">Vatican City 梵蒂冈</option>
+<option value="Venezuela">Venezuela 委内瑞拉</option>
+<option value="Vietnam">Vietnam 越南</option>
+<option value="Yemen">Yemen 也门</option>
+<option value="Yugoslavia ">Yugoslavia 南斯拉夫 </option>
+<option value="Zaire">Zaire 扎伊尔</option>
+<option value="Zambia">Zambia 赞比亚</option>
+<option value="Zimbabwe">Zimbabwe 津巴布韦</option>
+
+            </select>
+
+        </div>
+        <div>
+            <label for="Interest">Intruduction:</label>
+            <textarea type="text" name="resume" id="resume" placeholder="individual resume"></textarea>
+        </div>
+        <div>
+
+            <button style="overflow-y: auto" data-toggle="modal" data-target="#myModal" class="btn btn-default message">Message Verify</button>
+        </div>
+        <div class="finishBtn">
+
+            <button type="button" class="btn btn-default BaseColor finishButton" id="login">Finish</button>
+
+            <input type="checkbox" id="accept" class="AcceptInput"/>
+            <div class="Accept">Accept <a href="#">《Student in terms of Service》</a>
+            </div>
+        </div>
+    </form>
+    <div id="message"></div>
+</div>
+
+<script src="/wechat/Public/js/jquery-1.8.2.min.js"></script>
+<script src="/wechat/Public/js/register.js"></script>
+<script src="/wechat/Public/js/bootstrap.js"></script>
+
+</body>
+</html>

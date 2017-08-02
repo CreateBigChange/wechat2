@@ -1,0 +1,233 @@
+input{
+		font-size: 1em;
+        line-height:30px !important;
+        padding:0px;
+        height: 30px;
+	}
+	button{
+		font-size: 20px;
+	}
+	.BaseColor{
+			color:#66D9EF;
+
+	}
+	textarea{
+		border: 1px solid rgba(51,51,51,.5);
+	    -webkit-border-radius: 10px;
+	    -moz-border-radius: 10px;
+	    border-radius: 10px;
+	    padding: 5px;
+	    line-height: 30px;
+	    width: 100%;
+	    text-align: left;
+	    font-size: 1em;
+	    height: 100px;
+	}
+	textarea::-webkit-input-placeholder{color:#E5E6E6;}
+	textarea::-moz-placeholder{color:#E5E6E6;}
+	textarea:-moz-placeholder{color:#E5E6E6;}
+	.title-color{
+		background: #54B6D1 !important;
+	}
+   
+
+.star,
+.star.small {
+    border-color: #797979 transparent transparent transparent;
+    border-style: solid;
+    border-top-width: 9.375px;
+    border-right-width: 15px;
+    border-left-width: 15px;
+    height: 0;
+    margin-top: 9.375px;
+    margin-bottom: 6.02679px;
+    position: relative;
+    width: 0;
+}
+.star:before,
+.star.small:before,
+.star:after,
+.star.small:after {
+    border-color: #797979 transparent transparent transparent;
+    border-style: solid;
+    border-top-width: 9.375px;
+    border-right-width: 15px;
+    border-left-width: 15px;
+    content: '';
+    display: block;
+    height: 0;
+    left: -15px;
+    position: absolute;
+    top: -9.375px;
+    width: 0;
+}
+.star:before,
+.star.small:before {
+    transform: rotate(70deg);
+}
+.star:after,
+.star.small:after {
+    transform: rotate(-70deg);
+}
+
+.star.large {
+    border-color: #797979 transparent transparent transparent;
+    border-style: solid;
+    border-top-width: 27.58621px;
+    border-right-width: 40px;
+    border-left-width: 40px;
+    height: 0;
+    margin-top: 27.58621px;
+    margin-bottom: 17.73399px;
+    position: relative;
+    width: 0;
+}
+.star.large:before,
+.star.large:after {
+    border-color: #797979 transparent transparent transparent;
+    border-style: solid;
+    border-top-width: 27.58621px;
+    border-right-width: 40px;
+    border-left-width: 40px;
+    content: '';
+    display: block;
+    height: 0;
+    left: -40px;
+    position: absolute;
+    top: -27.58621px;
+    width: 0;
+}
+.star.large:before {
+    transform: rotate(70deg);
+}
+.star.large:after {
+    transform: rotate(-70deg);
+}
+.star_position{
+	float:left;
+
+}
+.afterStar{
+	border-color: #fd4 transparent transparent transparent !important;
+}
+.afterStar:before{
+	border-color: #fd4 transparent transparent transparent !important;
+}
+.afterStar:after{
+	border-color: #fd4 transparent transparent transparent !important;
+}
+
+.rateInformation{
+	margin-top:5px;font-size:15px;
+}
+
+.pinInput{
+	float:left;
+	width:60%;
+	height:40px;
+	margin-top:20px;
+	font-size:1.7rem;
+}
+
+.PhoneNumInput{
+	width:100%;height:40px;float: left;font-size:1.7rem;
+}
+.rating{
+	float: left;
+	margin-left: 12%;
+    font-size: 13px;
+ }
+ .starinput{
+ 	height: 0px;
+ }
+ .form-control{
+
+ 	color:#757575;
+ }
+ .nation{
+ 	font-size:13px;
+ 	height:30px;
+ 	width:100%;
+ 	margin-bottom:10px;
+ 	border:1px solid rgba(51,51,51,.5) ;
+ 	color:#757575;
+
+    background: #ffffff;
+     border-radius: 10em;
+ }
+ .Pin{
+ 	font-size:18px;
+ 	float: right;
+ 	margin-top:20px;
+ }
+ .Verify{
+ 	margin-top:50%;
+ 	font-size:38px;
+ }
+ .Accept{
+    margin-top: 10px;
+ 	margin-left:20px;
+     text-align:left !important;
+ }
+ .AcceptInput{
+ 	 float: left;
+ 	 margin-left:0px;
+ 	 width:15px;
+ 	 height:15px;
+ 	 margin-top:10px !important;
+ }
+ .Limg{
+ 	width:25px;
+ 	float:left;
+ 	margin-top:15px;
+ 	margin-right: 10px;
+ }
+ .finishButton{
+ 	width:100%;
+     font-size: 20px !important;
+ }
+ .LanguageModel{
+ 	width:95%;
+ }
+ .Direction{
+ 	font-size:20px;
+ }
+.closeBtn{
+	font-size:11px;
+}
+.verifyTitle{
+	font-size:20px;
+}
+.verifyBody{
+	height: 250px;
+}
+.form-group{
+	overflow: hidden;
+}
+.finishBtn{
+	overflow: auto;
+}
+.message{
+	margin-top:10px;
+	color:#66D9EF;
+    font-size: 20px!important;
+}
+.Language{
+	float:right;
+	margin-bottom: 10px;
+    font-size: 20px !important;
+
+}
+.verifyClose{
+	font-size:18px;
+}
+.messagebtn{
+	font-size:18px !important;
+}
+.body{
+	width:90%;
+    margin-top:5% !important;
+}
+.register{
+	font-size:38px !important;
+}

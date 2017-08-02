@@ -1,0 +1,26 @@
+.caption{
+    display: none !important;
+}
+.glyphicon {
+    display: none !important;
+}
+.rating-gly-star{
+    margin-left: 60px !important;
+    margin-top:-60px !important;
+    letter-spacing: 60px;
+    font-size: 50px;
+}
+.rating-gly {
+    font-size: 40px !important;
+    margin-top: -25px !important;
+    margin-left: -200px;
+}
+body{
+    font-size: 36px;
+}
+.personimg{
+    width:150px;
+}
+.place{
+    font-size:50px;
+}

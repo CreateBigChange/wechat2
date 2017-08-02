@@ -1,0 +1,316 @@
+.title{
+
+}
+.head{
+    height:50px;
+    width:100%;
+    background: #66D9EF;
+    color: #ffffff;
+
+    line-height: 50px;
+    text-align: center;
+}
+.title_font{
+    font-size: 28px;
+
+}
+.avatar{
+    margin-right: 0px !important;
+}
+.wmessage-img{
+    float: left;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.body{
+
+
+    background: #E0E2E4;
+}
+.touxiang{
+    width: 60px;
+    border-radius: 60px;
+    float: left;
+}
+.foreignertouxiang{
+
+    overflow: hidden;
+    background: #F6F8F1;
+    margin-left: 20px;
+    float: left;
+    width: 60px;
+    border-radius: 100px;
+
+
+}
+.foreignername{
+    float: left;
+    width: 68%;
+    margin-left: 20px;
+
+    text-align: left;
+
+}
+.foreignerpicture{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom:5px;
+
+}
+.foreigner{
+    background:#FFFFFF;
+    margin-left: 15px;
+    margin-top: 30px;
+
+    margin-right: 15px;
+    overflow: hidden;
+    padding-bottom:30px;
+}
+
+.chinese{
+    overflow: hidden;
+    background:#FFFFFF;
+    margin-left: 15px;
+    margin-top: 40px;
+    margin-right: 15px;
+}
+.picture{
+    width: 45%;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+
+}
+.name{
+   margin-left: 5px;
+    padding-top: 5px;
+    color: #000000;
+    width: 50%;
+    font-size: 17px;
+    float: left;
+}
+.nametitle{
+    font-size: 25px;
+
+}
+.namedetail{
+    font-size: 18px;
+    color:#9CA3A9;
+    width:100px;
+    display: block;
+    float: left;
+}
+.scode{
+    font-size: 38px;
+}
+.btn-commit{
+    width: 100px;
+    height: 80px;
+    font-size: 38px !important;
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.commition{
+
+}
+.stars{
+    float:left;
+}
+.detailanguage{
+    width: 100%;
+    height: 30px;
+}
+.textarea{
+
+
+    width:80%;
+
+
+    min-height:60px;
+
+
+    max-height:300px;
+
+
+    _height:120px;
+
+
+    margin-left:30px;
+
+
+    margin-right:auto;
+
+    margin-top: 20px;
+    background: #ffffff;
+    padding:3px;
+
+
+    outline:0;
+
+
+    border:1px solid #a0b3d6;
+
+
+    font-size:38px;
+
+
+    line-height:38px;
+
+
+    padding:2px;
+
+
+    word-wrap:break-word;
+
+
+    overflow-x:hidden;
+
+
+    overflow-y:auto;
+
+    float:left;
+
+
+
+    border-color:
+            rgba(82,168,236,0.8);
+
+
+    box-shadow:inset 0 1px 3px
+    rgba(0,0,0,0.1),0 0 8px
+    rgba(82,168,236,0.6);
+
+}
+.confire{
+    font-size:18px !important;
+    height:50px;
+    width: 95% ;
+
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+.self-model{
+    width: auto !important;
+    margin-top: 0px !important;
+}
+.model_font{
+    font-size: 15px !important;
+}
+#contentpanel{
+    display: none;
+}
+
+.glyphicon{
+    display: none !important;
+}
+.label{
+    display: none !important;
+}
+.comment{
+    font-size:50px !important;margin-top:10px;margin-left:10px;
+}
+.detail{
+
+    width: 92%;
+    background:#ffffff;
+    margin-left: 15px;
+    margin-right: 15px;
+    overflow:hidden;
+}
+.time{
+
+}
+.price{
+
+}
+.touxiangimg{
+    width:100px;height:100px;float:left;margin:5px;
+}
+.photoimg{
+    width:100px;height:100px;margin:5px;border:2px solid #ddd;
+}
+.address{
+    border-bottom: 2px solid #E0E2E4;
+    overflow: hidden;
+    margin-left: 12px;
+    width: 92%;
+}
+.topic{
+    text-align: center;
+    font-size: 25px;
+}
+.detail_content{
+    line-height: 20px !important;
+    height: auto !important;
+}
+.phone{
+    float: right;
+    border-bottom: 0px solid #E0E2E4 !important;
+}
+.common{
+    font-family: '微软雅黑';
+    font-size: 15px;
+    color:#5E5E5E;
+    border-bottom: 2px solid #E0E2E4;
+    margin: 10px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    height: 30px;
+}
+.chineseLAN{
+    float:left;
+    font-size: 11px;
+    border-radius:10px !important;
+
+}
+.phone-img{
+    width: 28px;
+    float: right;
+}
+.repeal{
+    margin-top: 5px;
+    height: 100%;
+    float:right;
+    font-size: 18px;
+    line-height: 100%;
+}
+.detail_address{
+    border-bottom: 0px solid #E0E2E4;
+    background: url("__PUBLIC__/resouce/img/timg.png");
+    height: 30px;
+    overflow: hidden;
+    width: 70%;
+    float: left;
+
+}
+.address_img{
+    width:40px;
+
+}
+.password{
+    float:right;
+    font-size: 15px;
+    height: 30px;
+    line-height: 30px;
+}
+.star{
+    width:20px;
+
+}
+.rate{
+    background: #66D9EF;
+}
+.chineseName{
+    overflow: hidden;
+}
+.commentimg{
+    width:200px;
+}
+.tela{
+    display:block;
+    height:30px;
+    width:50px;
+}
